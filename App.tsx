@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as Icons from 'lucide-react';
 import { Layout } from './components/Layout';
 import ChatWidget from './components/ChatWidget';
-import { SERVICES, SYMPTOM_CATEGORIES, LOCATIONS, TESTIMONIALS, BLOG_POSTS } from './constants';
+import { SERVICES, SYMPTOM_CATEGORIES, TESTIMONIALS, BLOG_POSTS } from './constants';
 import { Language, ServiceData } from './types';
 
 // Minimal Link Component
@@ -68,7 +68,7 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Icons.Clock, title: { en: '24/7 Availability', pidgin: 'We No Dey Close' }, desc: { en: 'Our doors never close. Doctors and emergency services are available round the clock.', pidgin: 'Whether day or night, doctor dey seat wait for you.' } },
-              { icon: Icons.ShieldCheck, title: { en: 'Certified Specialists', pidgin: 'Correct Doctors' }, desc: { en: 'Qualified and trained doctors and medical personnels across various medical fields.', pidgin: 'We better doctors and medical people for different different sickness.' } },
+              { icon: Icons.ShieldCheck, title: { en: 'Certified Specialists', pidgin: 'Correct Doctors' }, desc: { en: 'Qualified and trained doctors and medical personnels across various medical fields.', pidgin: 'We better doctors for different different sickness.' } },
               { icon: Icons.HeartPulse, title: { en: 'Modern Equipment', pidgin: 'New Machines' }, desc: { en: 'Advanced diagnostic and surgical technology for precise treatment.', pidgin: 'We get machine wey dey see inside body clear.' } }
             ].map((feature, idx) => (
               <div key={idx} className="bg-slate-50 p-8 rounded-2xl hover:bg-primary-50 transition-colors group animate-fade-in-up" style={{ animationDelay: `${idx * 0.1}s` }}>
@@ -414,92 +414,6 @@ const LocationsPage: React.FC<{ language: Language, setLocationContext: (ctx: st
   const navigate = (path: string) => {
       window.location.hash = path;
   };
-
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-12 text-center">{language === 'en' ? 'Our Locations' : 'Where We Dey'}</h1>
-      
-      <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {LOCATIONS.map((loc) => {
-           const locationServices = SERVICES.filter(s => loc.availableServices.includes(s.id));
-
-           return (
-            <div key={loc.id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 flex flex-col animate-fade-in-up">
-              <div className="h-48 bg-gray-200 relative">
-                 <img 
-                   src={loc.id === 'warri-main' ? "https://images.unsplash.com/photo-1587351021759-3e566b9af923?auto=format&fit=crop&q=80&w=800" : "https://images.unsplash.com/photo-1538108149393-fbbd8189718c?auto=format&fit=crop&q=80&w=800"} 
-                   alt={loc.name} 
-                   className="w-full h-full object-cover" 
-                 />
-                 <div className="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-xs font-bold text-primary-700 backdrop-blur-sm shadow">
-                   Open 24/7
-                 </div>
-              </div>
-              <div className="p-6 flex-grow flex flex-col">
-                <h3 className="text-2xl font-bold mb-2">{loc.name}</h3>
-                <p className="text-gray-600 mb-4 flex items-start gap-2">
-                  <Icons.MapPin size={18} className="mt-1 text-primary-500 flex-shrink-0" />
-                  {loc.address}
-                </p>
-                <p className="text-gray-600 mb-6 flex items-center gap-2">
-                  <Icons.Phone size={18} className="text-primary-500 flex-shrink-0" />
-                  {loc.phone}
-                </p>
-                
-                <div className="mt-auto space-y-3">
-                   {/* Expand Services Button */}
-                   <button 
-                     onClick={() => setExpandedLoc(expandedLoc === loc.id ? null : loc.id)}
-                     className="w-full py-2 px-4 border border-gray-200 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 flex items-center justify-between group transition-colors"
-                   >
-                     {language === 'en' ? 'View Services Provided' : 'See Wetin Dey Here'}
-                     <Icons.ChevronDown className={`transform transition-transform ${expandedLoc === loc.id ? 'rotate-180' : ''}`} size={16} />
-                   </button>
-
-                   {/* Expanded List */}
-                   {expandedLoc === loc.id && (
-                     <div className="bg-slate-50 p-4 rounded-lg border border-gray-100 text-sm animate-in slide-in-from-top-2">
-                       <h4 className="font-bold mb-2 text-primary-700">{language === 'en' ? 'Available Services:' : 'Wetin We Get:'}</h4>
-                       <div className="flex flex-wrap gap-2">
-                         {locationServices.map(s => (
-                           <span key={s.id} className="bg-white border border-gray-200 px-2 py-1 rounded text-xs text-gray-700">
-                             {s.title[language]}
-                           </span>
-                         ))}
-                       </div>
-                     </div>
-                   )}
-
-                   <div className="flex gap-3 pt-2">
-                      <button 
-                        onClick={() => {
-                           navigate('/contact');
-                        }}
-                        className="flex-1 bg-white border border-primary-600 text-primary-600 hover:bg-primary-50 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
-                      >
-                        <Icons.Calendar size={18} />
-                        {language === 'en' ? 'Book' : 'Book'}
-                      </button>
-
-                      <button 
-                        onClick={() => {
-                           setLocationContext(loc.name);
-                           alert(language === 'en' ? `Opening chat for ${loc.name}. (Check bottom right)` : `We don open chat for ${loc.name}. (Check under)`);
-                        }}
-                        className="flex-1 bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
-                      >
-                        <Icons.MessageSquare size={18} />
-                        {language === 'en' ? 'Chat' : 'Chat'}
-                      </button>
-                   </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
 };
 
 // 6. Blog Page
@@ -609,10 +523,6 @@ const ContactPage: React.FC<{ language: Language }> = ({ language }) => {
               <div className="flex items-start gap-4">
                 <Icons.MapPin className="text-primary-400 mt-1" />
                 <span>Inside Mosheshe Estate, Airport Road, Effurun - Warri</span>
-              </div>
-              <div className="flex items-start gap-4">
-                <Icons.MapPin className="text-primary-400 mt-1" />
-                <span>45 Nnebisi Road, Asaba</span>
               </div>
             </div>
           </div>

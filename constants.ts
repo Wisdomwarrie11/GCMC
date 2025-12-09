@@ -3,7 +3,6 @@ import { ContentText, ServiceData, SymptomCategory, LocationData, Testimonial, B
 // Service IDs
 const S_SURGERY = 'surgery';
 const S_OBGYN = 'obgyn';
-const S_ENT = 'ent';
 const S_GENMED = 'genmed';
 const S_PAEDIATRICS = 'paediatrics';
 const S_NICU = 'nicu';
@@ -29,13 +28,7 @@ export const SERVICES: ServiceData[] = [
     iconName: 'Baby',
     image: 'obs.jpeg'
   },
-  {
-    id: S_ENT,
-    title: { en: 'E.N.T', pidgin: 'Ear, Nose & Throat' },
-    description: { en: 'Specialist care for ear, nose, and throat conditions.', pidgin: 'Doctor for ear, nose and throat wahala.' },
-    iconName: 'Ear',
-    image: 'ent.jpeg'
-  },
+ 
   {
     id: S_GENMED,
     title: { en: 'General Medicine', pidgin: 'General Body Treatment' },
@@ -102,31 +95,12 @@ export const SERVICES: ServiceData[] = [
  
 ];
 
-export const LOCATIONS: LocationData[] = [
-  {
-    id: 'warri-main',
-    name: 'Warri Branch',
-    address: 'Inside Mosheshe Estate, Airport Road, Effurun, Warri',
-    phone: '+234 800 123 4567',
-    mapLink: '#',
-    availableServices: [S_SURGERY, S_OBGYN, S_GENMED, S_PAEDIATRICS, S_NICU, S_LAB, S_RADIOLOGY, S_PHARMACY, S_AMBULANCE, S_NURSING, S_PHYSIO] // All except ENT
-  },
-  {
-    id: 'asaba-main',
-    name: 'Asaba Branch',
-    address: '45 Nnebisi Road, Asaba, Delta State',
-    phone: '+234 800 999 8888',
-    mapLink: '#',
-    availableServices: [S_SURGERY, S_OBGYN, S_ENT, S_GENMED, S_PAEDIATRICS, S_NICU, S_LAB, S_RADIOLOGY, S_PHARMACY, S_AMBULANCE, S_NURSING, S_PHYSIO] // All Services
-  }
-];
 
 export const NAV_LINKS = [
   { path: '/', label: { en: 'Home', pidgin: 'House' } },
   { path: '/about', label: { en: 'About Us', pidgin: 'Who We Be' } },
   { path: '/services', label: { en: 'Services', pidgin: 'Wetin We De Do' } },
   { path: '/symptoms', label: { en: 'Symptom Checker', pidgin: 'Check Body' } },
-  { path: '/locations', label: { en: 'Locations', pidgin: 'Our Places' } },
   { path: '/blog', label: { en: 'Blog', pidgin: 'Gist' } },
   { path: '/contact', label: { en: 'Contact', pidgin: 'Holla Us' } },
 ];
@@ -163,7 +137,6 @@ export const SYMPTOM_CATEGORIES: SymptomCategory[] = [
     symptoms: [
       { name: { en: 'High Fever', pidgin: 'Hot Body' }, recommendedService: S_PAEDIATRICS },
       { name: { en: 'Persistent Cough', pidgin: 'Cough wey no gree go' }, recommendedService: S_PAEDIATRICS },
-      { name: { en: 'Ear Pain', pidgin: 'Ear pain' }, recommendedService: S_ENT },
       { name: { en: 'Diarrhea', pidgin: 'Running Belle' }, recommendedService: S_PAEDIATRICS },
       { name: { en: 'Vomiting', pidgin: 'Vomiting' }, recommendedService: S_PAEDIATRICS },
       { name: { en: 'Skin Rash', pidgin: 'Krokro for body' }, recommendedService: S_PAEDIATRICS },
@@ -176,7 +149,6 @@ export const SYMPTOM_CATEGORIES: SymptomCategory[] = [
     symptoms: [
       { name: { en: 'Severe Headache', pidgin: 'Strong Headache' }, recommendedService: S_GENMED },
       { name: { en: 'Broken Bone', pidgin: 'Bone break' }, recommendedService: S_SURGERY },
-      { name: { en: 'Hearing Loss', pidgin: 'Ears dey block' }, recommendedService: S_ENT },
       { name: { en: 'Back Pain', pidgin: 'Back pain' }, recommendedService: S_PHYSIO },
       { name: { en: 'Joint Pain', pidgin: 'Joint pain' }, recommendedService: S_PHYSIO },
       { name: { en: 'Stomach Ulcer', pidgin: 'Ulcer' }, recommendedService: S_GENMED },
