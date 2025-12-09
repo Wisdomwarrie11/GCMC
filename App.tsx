@@ -32,7 +32,7 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
           <div className="animate-fade-in-up">
             <span className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-1.5 text-sm font-semibold text-primary-200 mb-8 backdrop-blur-md shadow-xl">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-              {language === 'en' ? 'Serving Warri & Asaba Since 2002' : 'We don dey since 2002 for Warri & Asaba'}
+              {language === 'en' ? 'Serving Warri Since 2002' : 'We don dey since 2002 for Warri'}
             </span>
             <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight">
               {language === 'en' ? 'World-Class Healthcare,' : 'Better Healthcare,'} <br />
