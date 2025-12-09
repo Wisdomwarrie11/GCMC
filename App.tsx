@@ -35,12 +35,12 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
               {language === 'en' ? 'Serving Warri Since 2002' : 'We don dey since 2002 for Warri'}
             </span>
             <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-              {language === 'en' ? 'World-Class Healthcare,' : 'Better Healthcare,'} <br />
+              {language === 'en' ? 'Experience Excellent Healthcare' : 'Better Healthcare'} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">{language === 'en' ? 'Right Where You Are.' : 'For Your Backyard.'}</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
               {language === 'en' 
-                ? 'Experience compassionate care, cutting-edge technology, and expert specialists working 24/7 to ensure your family’s well-being.' 
+                ? 'Get compassionate care, cutting-edge technology, and expert specialists working 24/7 to ensure your family’s well-being.' 
                 : 'We get correct doctors and latest machines wey dey work 24/7 to make sure say you and your family dey okay properly.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
