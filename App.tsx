@@ -17,7 +17,7 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[700px] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
+      <section className="relative min-h-[450px] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
         {/* Background Image with Zoom Effect */}
         <div className="absolute inset-0 overflow-hidden">
           <img 
@@ -34,8 +34,8 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
               {language === 'en' ? 'Serving Warri Since 2002' : 'We don dey since 2002 for Warri'}
             </span>
-            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
-              {language === 'en' ? 'Experience Excellent Healthcare' : 'Better Healthcare'} <br />
+            <h1 className="text-5xl md:text-6xl font-black leading-tight tracking-tight">
+              {language === 'en' ? 'Experience Excellent Healthcare' : 'We go take care of you well well'} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">{language === 'en' ? 'Right Where You Are.' : 'For Your Backyard.'}</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
