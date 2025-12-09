@@ -34,7 +34,7 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
               {language === 'en' ? 'Serving Warri Since 2002' : 'We don dey since 2002 for Warri'}
             </span>
-            <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
               {language === 'en' ? 'World-Class Healthcare,' : 'Better Healthcare,'} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">{language === 'en' ? 'Right Where You Are.' : 'For Your Backyard.'}</span>
             </h1>
