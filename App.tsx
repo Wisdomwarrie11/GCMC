@@ -17,7 +17,7 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[500px] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
+      <section className="relative min-h-[700px] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
         {/* Background Image with Zoom Effect */}
         <div className="absolute inset-0 overflow-hidden">
           <img 
