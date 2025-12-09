@@ -51,6 +51,13 @@ export const SERVICES: ServiceData[] = [
     image: 'paediatrics.jpeg'
   },
   {
+    id: S_NURSING,
+    title: { en: 'Nursing', pidgin: 'Nurse' },
+    description: { en: 'Qulaified nurses to take care of you', pidgin: 'We get better nurses wey go care for you.' },
+    iconName: 'Coffee',
+    image: 'nursing.jpeg'
+  }
+  {
     id: S_NICU,
     title: { en: 'Neonatal ICU', pidgin: 'Special Baby Care' },
     description: { en: 'Intensive care for ill or premature newborn infants.', pidgin: 'Strong care for baby wey dem born small or wey sick.' },
@@ -92,13 +99,7 @@ export const SERVICES: ServiceData[] = [
     iconName: 'Ambulance',
     image: 'ambulance.jpeg'
   },
-  {
-    id: S_NURSING,
-    title: { en: 'Nursing', pidgin: 'Nurse' },
-    description: { en: 'Qulaified nurses to take care of you', pidgin: 'We get better nurses wey go care for you.' },
-    iconName: 'Coffee',
-    image: 'nursing.jpeg'
-  }
+ 
 ];
 
 export const LOCATIONS: LocationData[] = [
