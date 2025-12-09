@@ -56,7 +56,7 @@ export const SERVICES: ServiceData[] = [
     description: { en: 'Qulaified nurses to take care of you', pidgin: 'We get better nurses wey go care for you.' },
     iconName: 'Coffee',
     image: 'nursing.jpeg'
-  }
+  },
   {
     id: S_NICU,
     title: { en: 'Neonatal ICU', pidgin: 'Special Baby Care' },
