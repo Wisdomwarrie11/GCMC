@@ -48,8 +48,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, language, setLanguage,
             </div>
             {/* Logo Text */}
             <div className="flex flex-col justify-center">
-              <span className="font-black text-slate-800 leading-none text-xl md:text-2xl tracking-tight group-hover:text-primary-700 transition-colors">GCMC</span>
-              <span className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest group-hover:text-primary-600/80 transition-colors">Group Christian Medical Centre</span>
+              <span className="font-black text-slate-800 leading-none text-xl md:text-2xl tracking-tight group-hover:text-primary-700 transition-colors">MH</span>
+              <span className="text-[10px] md:text-xs font-bold text-gray-500 uppercase tracking-widest group-hover:text-primary-600/80 transition-colors">MyHospital</span>
             </div>
           </a>
 
@@ -124,8 +124,8 @@ export const Layout: React.FC<LayoutProps> = ({ children, language, setLanguage,
         <div className="container mx-auto px-4 grid md:grid-cols-4 gap-10">
           <div className="animate-fade-in">
             <div className="flex items-center gap-3 mb-6">
-               <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary-900/50">G</div>
-               <span className="text-white font-bold text-xl tracking-tight">GCMC</span>
+               <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-primary-900/50">MH</div>
+               <span className="text-white font-bold text-xl tracking-tight">MyHospital</span>
             </div>
             <p className="text-sm leading-relaxed mb-6 text-slate-400">
               {language === 'en' 
@@ -173,13 +173,13 @@ export const Layout: React.FC<LayoutProps> = ({ children, language, setLanguage,
               </li>
               <li className="flex gap-3 items-start">
                 <span className="text-primary-500 mt-0.5">✉️</span> 
-                <span className="hover:text-white transition-colors cursor-pointer">info@gcmcwarri.com</span>
+                <span className="hover:text-white transition-colors cursor-pointer">info@myhospital.com</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500 font-medium">
-          © {new Date().getFullYear()} Group Christian Medical Centre. All rights reserved. 
+          © {new Date().getFullYear()} MyHospital. All rights reserved. 
           <span className="mx-3 text-slate-700">|</span>
           <a href="#/terms" className="hover:text-white transition-colors">Terms of Service</a>
         </div>

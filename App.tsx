@@ -61,7 +61,7 @@ const HomePage: React.FC<{ language: Language }> = ({ language }) => {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{language === 'en' ? 'Why Choose GCMC?' : 'Why You Suppose Choose Us?'}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{language === 'en' ? 'Why Choose MyHospital?' : 'Why You Suppose Choose MyHospital'}</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'We combine medical expertise with spiritual compassion.' : 'We join better doctor work with God hand.'}</p>
           </div>
           
@@ -172,7 +172,7 @@ const AboutPage: React.FC<{ language: Language }> = ({ language }) => {
         />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-black mb-4 tracking-tight animate-fade-in-up">
-            {language === 'en' ? 'About GCMC' : 'About Us'}
+            {language === 'en' ? 'About MyHospital' : 'About Us'}
           </h1>
           <p className="text-xl text-primary-200 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             {language === 'en' ? 'Excellence in Healthcare, Rooted in Faith.' : 'Better Healthcare with God Hand.'}
@@ -232,12 +232,12 @@ const AboutPage: React.FC<{ language: Language }> = ({ language }) => {
                 <div className="prose prose-lg text-gray-600 space-y-6">
                   <p>
                     {language === 'en'
-                      ? 'Founded in 2002, Group Christian Medical Centre (GCMC) started with a singular vision: to bridge the gap between faith-based compassion and modern medical science. Located in the heart of Effurun, Warri, inside the serene Mosheshe Estate, we established a sanctuary for healing.'
+                      ? 'Founded in 2002, MyHospital started with a singular vision: to bridge the gap between faith-based compassion and modern medical science. Located in the heart of Effurun, Warri, inside the serene Mosheshe Estate, we established a sanctuary for healing.'
                       : 'We start for 2002 with one mind: to join God work and hospital work together. We dey inside Mosheshe Estate for Warri, place wey quiet well well for person to recover.'}
                   </p>
                   <p>
                     {language === 'en'
-                      ? 'Over the decades, we have expanded to Asaba and grown our team to include over 50 specialists. From our humble beginnings, we have evolved into a multi-specialty hospital known for successful surgeries, advanced neonatal care, and 24/7 emergency readiness.'
+                      ? 'Over the decades, we have expanded to Benin and grown our team to include over 50 specialists. From our humble beginnings, we have evolved into a multi-specialty hospital known for successful surgeries, advanced neonatal care, and 24/7 emergency readiness.'
                       : 'As time dey go, we don expand go Asaba and we get pass 50 big doctors now. From small beginning, we don turn big hospital wey sabi do surgery well and care for small pikin.'}
                   </p>
                 </div>
@@ -518,7 +518,7 @@ const ContactPage: React.FC<{ language: Language }> = ({ language }) => {
               </div>
               <div className="flex items-start gap-4">
                 <Icons.Mail className="text-primary-400 mt-1" />
-                <span>info@gcmcwarri.com</span>
+                <span>info@myhospital.com</span>
               </div>
               <div className="flex items-start gap-4">
                 <Icons.MapPin className="text-primary-400 mt-1" />
